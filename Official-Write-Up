@@ -2,11 +2,93 @@ If you want to start task, you need to contact with bot (In my case : @deep_lear
 
 ____
 
-## First part:
+First part:
 
-* Now we cant really understand, what we need to do.
-* Lets use command : /commands to see the list of all ouropportunities.
-    * Only thing we can do: /help. That's all :)
-    * After using command help we can see:
-    The scouts conveyed the message, but it seems that it is a little distorted: It’s not enough to think like a RmxhZw==, you need to 6265636f6d65 a RmxhZw==.
-    To check state : /state
+Now we cant really understand, what we need to do.
+Lets use command : /commands to see the list of all ouropportunities.
+Only thing we can do: /help. That's all :)
+
+After using command help we can see:
+The scouts conveyed the message, but it seems that it is a little distorted: 
+It’s not enough to think like a RmxhZw==, you need to 6265636f6d65 a RmxhZw==.
+To check state : /state
+
+There is not very hard crypt so we can easily decrypt it:
+   RmxhZw== is b64. With decryption: Flag
+   6265636f6d65 is HEX. With decryption: become
+
+____
+Second part:
+
+After changing telegram nickname to something with Flag (not flag or another variants) :
+We are getting .rar file that contains a lot of folders inside.
+After walking through with python script using os library you could find 2 .txt files inside in which state:
+   maybe these files contain the anzr bs fbzr shapgvba?
+
+anzr bs fbzr shapgvba? - Simple caesars; 
+On ROT13 can find : name of some function?
+
+Second file:
+   Every clue could be
+   Very sad, but useful
+   And the only thing that you can do
+   Let yourself to write answers to the bot
+   ()
+
+Nothing interesning here? Not really:
+   E  very clue could be
+   V  ery sad, but useful
+   A  nd the only thing that you can do
+   L  et yourself to write answers to the bot
+   ()
+
+That's how we can find the name of the function.
+
+Send it to bot:
+   eval(); 
+____
+Third part:
+
+Bot will answer:
+
+@bot.message_handler(content_types=['text'])
+            def flag(message):
+                message.text = filtr(message)
+                (eval(message.text))
+                # To the developer:
+                # Do not forget to change variable 'flag' to function!
+                # And bot name from 'bot' to something another!
+
+
+references to the use of a specific library:
+   @bot.message_handler(content_types=['text'])
+
+Hint could be in commentaries:
+   Do not forget to change variable 'flag' to function!
+So now you know that FLAG is variable, not function or something.
+
+Second comment:
+   And bot name from 'bot' to something another!
+So now you know bot name = bot;
+
+Now you need to send message from bot to yourself using eval() function and telebot methods like this:
+   bot.send_message(message.chat.id, flag) or 
+   bot.send_message(chat_id = message.chat.id, text = flag)
+____
+Final steps:
+
+We are gettin string in this format:
+   VzBXX1kwVV80UjNfUjM0TExZXzZSMzRUX0g0Q3w8M1I=
+Classic b64 encryption;
+After decryption:
+   RFlag{W0W_Y0U_4R3_R34LLY_6R34T_H4C|<3R}
+Let bot eat this flag and congrats:
+Congtats! Thanks for doing this task!
+
+If you want to comment something, please
+contact to me:
+https://t.me/rive_n
+@rive_n
+https://t.me/rivens_basics
+@rivens_basics
+   
