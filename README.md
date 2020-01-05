@@ -17,3 +17,7 @@ ____
 ____
 
 [telebot_documentation](https://github.com/eternnoir/pyTelegramBotAPI)
+
+____
+
+![Alt-текст](http://www.quickmeme.com/img/dc/dcb8fac9dd1e4b6a1ae3ae43da0d3bfff53d3cdcc83395cb8fb4df770e302287.jpg)
