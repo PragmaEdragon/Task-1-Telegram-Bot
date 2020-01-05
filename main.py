@@ -5,8 +5,8 @@ import logging
 Creating a connection through proxy
 'cause telegram is banned in my region <3
 '''
-# apihelper.proxy = {'https': 'socks5://127.0.0.1:9050'}
-bot = telebot.TeleBot("884413936:AAHJlaDMhdifXoTB7LBQ-bV2RD2PXvZNczM")
+
+bot = telebot.TeleBot(TOKEN)
 
 '''
 1. Creating a unique id dictionary for checking chat state;
