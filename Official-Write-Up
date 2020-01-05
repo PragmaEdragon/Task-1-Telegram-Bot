@@ -1,6 +1,12 @@
-If you want to start task, you need to contact with bot 
-(In my case : 
-```python 
-@deep_learing_bot
-```
-)
+If you want to start task, you need to contact with bot (In my case : @deep_learing_bot); 
+
+____
+
+## First part:
+
+* Now we cant really understand, what we need to do.
+* Lets use command : /commands to see the list of all ouropportunities.
+    * Only thing we can do: /help. That's all :)
+    * After using command help we can see:
+    The scouts conveyed the message, but it seems that it is a little distorted: It’s not enough to think like a RmxhZw==, you need to 6265636f6d65 a RmxhZw==.
+    To check state : /state
